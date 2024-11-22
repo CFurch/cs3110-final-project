@@ -1,5 +1,8 @@
 lib/*
 bin/*
 include/*
+etc/*
+share/*
+.ipynb_checkpoints/*
 pyvenv.cfg
 
