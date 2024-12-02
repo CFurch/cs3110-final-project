@@ -5,7 +5,11 @@ We plan on examining the impact of differentially private algorithms on the COMP
 The problem we intend to solve is effect of DP algorithms on the accuracy of datasets (other than the adult dataset with which we have previously examined).
 Our analysis will include implementations of synthetic represenation, as well as comparisons between Zero-Centered, Renyi, and Epsilon-Delta differential privacy. 
 
-## TODO:
+# Datasets
+https://www.kaggle.com/datasets/danofer/compass
+https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm
+
+# TODO:
 Synth Rep - 
 Comparison of accuracy Adult Dataset and COMPAS Dataset
 
