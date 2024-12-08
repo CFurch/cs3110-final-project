@@ -14,6 +14,10 @@ We also did some minor de-identification with the removal of names and date of b
 ### Synthetic Data
 Alex Stute
 
+In my analysis, I focused on using synthetic representations and synthetic data to examine the correlation between race and decile score of a person in the dataset. To start, I created a one-way marginal for decile scores so that their accuracy to the actual scores could be compared. This one-way marginal gets the count of all the possible decile scores and creates a normalized synthetic representation. The accuracy of this representation was then compared to the actual data by creating synthetic decile_score data from the representation and calculating the percent error present for each decile score value.
+
+Next, a two-way marginal was created between race and decile score. This was done by first creating a one-way marginal for race, then that was used alongside the decile scores to create a two-way marginal. This two-way marignal was then used to create decile score distributions for each race in the dataset. The findings from the synthetic data seem to match the given analyzed solution through Propublica, with African-American people tending to have a higher decile score than Caucasians, who see a sharp drop off in decile scores overall.
+
 ### Alternative Algorithms
 Colin Furch
 
