@@ -7,9 +7,9 @@ Our analysis will include implementations of synthetic represenation, as well as
 
 ## Analysis
 
-### Data/Chosen Variables
-For our chosen data there are a few terms and variables that should be mentioned. We continued to utilize the adult dataset as a basis for comparison for the accuracy of our differentially private algorithms. However, the COMPAS dataset is not consistent with row-per-user privacy, and has to be adjusted as such. In order to provide user-level privacy, we needed to limit the contributions and modify our sensitivity. We decided on a maximum user contribution of 15 custody dates, and modified our sensitivity to reflect this.
-Ideally we would also implement a clipping mechanism to prevent a user from exceeding this value.
+### Data Pre-Processing
+In order to gain accurate insights and to provide user-level privacy, several changes had to be made to the dataset. The data as provided had several rows which had nearly identical data, with the only differences being custody dates which had no impact on the recidivism or decile scores. This pre-processing significantly improves accuracy of later queries by reducing the necessary sensitivities which would otherwise make much of the data unusable. 
+We also did some minor de-identification with the removal of names and date of birth as it would not be necessary in most cases for analysis.
 
 ### Synthetic Data
 Alex Stute
@@ -17,7 +17,7 @@ Alex Stute
 ### Alternative Algorithms
 Colin Furch
 
-During my analysis I decided to focus on comparing the accuracy and percent error of queries across a column that was shared between Adult and COMPAS data sets, namely ages. One thing is observable almost immediately is the impact of the sensitivity on the accuracy of the queries, especially with the $\epsilon,\delta$-algorithm.
+During my analysis I decided to focus on comparing the accuracy and percent error of queries across a column that was shared between Adult and COMPAS data sets, namely ages. There is a noticeable difference
 
 
 # Datasets
