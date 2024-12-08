@@ -21,16 +21,16 @@ Next, a two-way marginal was created between race and decile score. This was don
 ### Alternative Algorithms
 Colin Furch
 
-During my analysis I decided to focus on comparing the accuracy and percent error of queries across a column that was shared between Adult and COMPAS data sets, namely ages. There is a noticeable difference
+During my analysis I decided to focus on comparing the accuracy and percent error of queries across a column that was shared between Adult and COMPAS data sets, namely ages. 
+
+In order to be able to draw conclusions from my analysis I made a few concessions, epsilon would remain consistent between $(\epsilon,\delta)$-DP and RDP, while $\rho$ would remain at a fairly low $.0001$ for zCDP. As I was using age, I settled on using a sensitivity of 100, and clipped my queries as such.
+Queries were conducted 100 times each, then compared to the real results of their respective datasets.
+
+From my analysis I noticed that $(\epsilon,\delta)$-DP provided accuracy that was consistently lower than RDP or zCDP across all datasets. Renyi then provided fairly high accuracy, followed by zCDP, though the estimation of rho in these tests is likely a culprit here.
+
+Most notably however is the difference in accuracy between the two datasets. The COMPAS dataset using the same algorithms provided consistently worse accurcy across the queries, with the percent error roughly around 3 times higher. This error is interesting as it reveals potential limitations of differentially private algorithms for universal applications.
 
 
 # Datasets
 https://www.kaggle.com/datasets/danofer/compass
 https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm
-
-# TODO:
-Synth Rep - 
-Comparison of accuracy Adult Dataset and COMPAS Dataset
-
-DP Definitions - 
-zCDP/Renyi/Epsilon Delta of COMPAS vs ADULT
